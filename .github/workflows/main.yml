@@ -24,8 +24,8 @@ jobs:
       - name: Configure Poetry
         run: poetry config virtualenvs.in-project true
 
-      - name: Install dependencies (no root package)
-        run: poetry install --no-interaction --no-root  --with dev
+      - name: Install dependencies (with dev)
+        run: poetry install --no-interaction --no-root  --with=dev
 
       - name: Run tests with coverage (branch)
         env:
